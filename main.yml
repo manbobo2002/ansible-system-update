@@ -1,7 +1,9 @@
 # NOTE01: Be sure to modify your /etc/ansible/hosts file to include your hosts!
 # NOTE02: Be sure to ssh-add private key!
 ---
-- hosts: localhost # Replace this once you add your hosts; localhost will require a password which will probably fail by default
+- hosts: all # Replace this once you add your hosts; localhost will require a password which will probably fail by default
+  vars:
+    ansible_python_interpreter: /usr/bin/python3
   become: true # This makes it so Ansible becomes root to run privilaged tasks such as updating the system
   tasks:
   - name: Upgrade all installed packages for Debian and Ubuntu
