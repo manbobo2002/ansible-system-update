@@ -4,7 +4,7 @@ This is the code I wrote for the [Ansible video](https://youtu.be/2ILbndq7HfE) I
 * Ansible 2.0 or greater (install it via python-pip)
 * A server (or five) to run it against. Localhost [works](https://docs.ansible.com/ansible/2.4/ansible-playbook.html) too.
 
-Remember that you'll need to create the file `/etc/ansible/hosts` and add entries for the servers you want to run updates against. Read more about the hosts file [here](https://docs.ansible.com/ansible/latest/user_guide/intro_inventory.html).
+Remember that you'll need to modify entries for the servers you want to run updates against. Read more about the hosts file [here](https://docs.ansible.com/ansible/latest/user_guide/intro_inventory.html).
 
 Once you have added your hosts, update the `hosts:` entry in the `main.yml` with the name of your host, and then run `ansible-playbook main.yml`. If your host is running Ubuntu, Debian, CentOS, or openSUSE Leap, Ansible will begin updating your system!
 
